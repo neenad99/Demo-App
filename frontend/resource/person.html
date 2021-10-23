@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script/person.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<form onsubmit="addPerson()">
+    <table style="width:100%">
+        <thead></thead>
+        <tbody>
+        <tr>
+            <td>
+                <table id="register_table" style="width:auto">
+                    <thead><th colspan="2"><b>Registration</b></th></thead>
+                    <tbody>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" id="first_name" name="first_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" id="last_name" name="last_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" id="email" name="date"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" id="add_person"></td>
+                        <td><input type="button" id="fetch" value="Fetch" onclick="fetchPeople()"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <table id="fetch_people_table" border="1" style="width:100%">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>
