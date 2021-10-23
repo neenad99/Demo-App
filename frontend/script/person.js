@@ -1,11 +1,14 @@
 function addPerson(){
+    var protocol = window.location.protocol
+    var hostName = window.location.hostname;
+
     var firstName = $("#first_name")[0].value;
     var lastName = $("#last_name")[0].value;
     var email = $("#email")[0].value;
 
     $.ajax({
                  type: "POST",
-                 url: "http://localhost:3000/api/auth",
+                 url: protocol+"//"+hostName+":3000/api/auth",
                  data: JSON.stringify({
                                           "firstName": firstName,
                                           "lastName": lastName,
@@ -25,9 +28,14 @@ function addPerson(){
 }
 
 function fetchPeople(){
+  var protocol = window.location.protocol
+  var hostName = window.location.hostname;
+
+  console.log(protocol+hostName+":3000/api/user");
+
   $.ajax({
                  type: "GET",
-                 url: "http://localhost:3000/api/user",
+                 url: protocol+"//"+hostName+":3000/api/user",
                  contentType: "application/json; charset=utf-8",
                  crossDomain: true,
                  dataType: "json",
